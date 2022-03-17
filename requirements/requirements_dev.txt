@@ -16,9 +16,11 @@ pytest-timeout
 pytest-xdist<1.28.0
 tox  # for awxkit
 logutils
+argon2-cffi==20.1.0
 jupyter
 matplotlib
 backports.tempfile  # support in unit tests for py32+ tempfile.TemporaryDirectory
 mockldap
 sdb
 atomicwrites==1.1.5
+Pillow==6.2.2

@@ -81,7 +81,27 @@ RUN yum -y install acl \
   xorg-x11-fonts-misc \
   xorg-x11-fonts-Type1 \
   xorg-x11-utils \
-  yum-utils
+  yum-utils \
+  git \
+  libjpeg8-dev \
+  libjpeg-dev \
+  zlib1g-dev \
+  python-imaging \
+  python3-pil \
+  python3-pil.imagetk \
+  libjpeg \
+  zlib \
+  libtiff \
+  libfreetype \
+  libwebp \
+  tcl/tk \
+  openjpeg \
+  libimagequant \
+  libraqm \
+  libxcb \
+  redhat-rpm-config \
+  nodejs \ 
+  npm
 
 ENV PATH="/usr/pgsql-10/bin:${PATH}"
 
