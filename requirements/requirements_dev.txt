@@ -4,12 +4,12 @@ pprofile
 ipython==7.21.0
 unittest2
 black
-pytest
-pytest-cov
-pytest-django
-pytest-pythonpath
+pytest==6.2.5
+pytest-cov==2.12.1
+pytest-django==4.4.0
+pytest-pythonpath==0.7.3
 pytest-mock==1.11.1
-pytest-timeout
+pytest-timeout==1.4.2
 pytest-xdist==1.34.0 # 2.0.0 broke zuul for some reason
 tox  # for awxkit
 logutils

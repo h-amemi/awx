@@ -14,6 +14,11 @@ ENV LC_ALL en_US.UTF-8
 USER root
 
 # Install build dependencies
+RUN sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-*
+RUN sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g' /etc/yum.repos.d/CentOS-*
+
+RUN dnf --refresh
+
 RUN dnf -y module enable 'postgresql:12'
 RUN dnf -y update && \
     dnf -y install epel-release 'dnf-command(config-manager)' && \
@@ -78,6 +83,9 @@ ENV LC_ALL en_US.UTF-8
 USER root
 
 # Install runtime requirements
+RUN sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-*
+RUN sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g' /etc/yum.repos.d/CentOS-*
+
 RUN dnf -y module enable 'postgresql:12'
 RUN dnf -y update && \
     dnf -y install epel-release 'dnf-command(config-manager)' && \
